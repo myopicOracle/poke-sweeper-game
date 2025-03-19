@@ -2,12 +2,12 @@
 ### *A Memory Game*
 https://poke-sweeper.netlify.app/
 
-## Version 1.0 - Explore the Pokédex
-![PokéSweeper Version 1.0](src/assets/pokesweeper_v1_charizard.png)
+## Version 2.0 - Test Your Pokédexic Memory!
+![PokéSweeper Version 2.0](src/assets/pokesweeper_v2.png)
 
 > Hooks: useState(), useEffect()
 
-> Fetch API: pokeapi.co
+> API: pokeapi.co
 
 ## Docs:
 > https://pokeapi.co/docs/v2
@@ -19,4 +19,4 @@ https://poke-sweeper.netlify.app/
 > Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.
 
 ---
-*[Netlify Permalink](https://poke-sweeper.netlify.app/)* | *last updated: March 16, 2025*
+*[Netlify Permalink](https://poke-sweeper.netlify.app/)* | *last updated: March 17, 2025*

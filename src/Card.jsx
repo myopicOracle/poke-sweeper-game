@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 export default function Card({ current, setCurrent, setRecord, array, setArray }) {
-  const randomNumber = () => Math.floor(Math.random() * 30)
+  const randomNumber = () => Math.floor(Math.random() * 99)
   const [randomId, setRandomId] = useState(randomNumber())
   const [pokemon, setPokemon] = useState({
     name: "pikachu",
