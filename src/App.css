@@ -22,6 +22,13 @@
   border: 1.5px solid #050404;
 }
 
+@keyframes highlight {
+  0% { transform: scale(1); color: inherit; }
+  15% { transform: scale(10); color: #646cffaa; }
+  85% { transform: scale(10); color: #646cffaa; }
+  100% { transform: scale(1); color: inherit; }
+}
+
 .logo {
   height: 5vh;
   width: 5vh;
@@ -100,4 +107,3 @@ img {
   width: 5vw;
   aspect-ratio: 1/1;
 }
-

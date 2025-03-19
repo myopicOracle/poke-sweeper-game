@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import logo from './assets/pokeball.png'
-import './App.css'
 import Card from './Card'
+import './App.css'
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0)
   const [highScore, setHighScore] = useState(0)
   const [trackerArray, setTrackerArray] = useState([])
+  const [animateRecord, setAnimateRecord] = useState(false)
+
+  const handleRecordUpdate = (newScore) => {
+    if (newScore > highScore) {
+      setHighScore(newScore)
+      setAnimateRecord(true)
+      setTimeout(() => setAnimateRecord(false), 3000)
+    }
+  }
 
   return (
     <>
@@ -23,22 +32,28 @@ function App() {
         </div>
         <div className="scoreboard right">
           <h3>Record:</h3>
-          <p>{highScore}</p>
+          <p style={animateRecord ? { animation: 'highlight 3s ease-in-out' } : {}}>
+            {highScore}
+          </p>
         </div>
       </div>
       <div className='card-container'>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
-        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        {(() => {
+          const cards = [];
+          for (let i = 0; i < 12; i++) {
+            cards.push(
+              <Card 
+                key={i}
+                current={currentScore} 
+                setCurrent={setCurrentScore} 
+                record={highScore} 
+                setRecord={handleRecordUpdate}
+                array={trackerArray} 
+                setArray={setTrackerArray}
+              />
+            )}
+          return cards;
+        })()}
       </div>
     </>
   )

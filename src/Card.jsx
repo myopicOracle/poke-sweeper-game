@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function Card({ current, setCurrent, record, setRecord, array, setArray }) {
+export default function Card({ current, setCurrent, setRecord, array, setArray }) {
   const randomNumber = () => Math.floor(Math.random() * 30)
   const [randomId, setRandomId] = useState(randomNumber())
   const [pokemon, setPokemon] = useState({
@@ -21,22 +21,18 @@ export default function Card({ current, setCurrent, record, setRecord, array, se
   }, [randomId])   
 
   const nextCard = () => {
-
     if (array.includes(randomId)) {
       setArray([])
       setCurrent(0)
 
     } else {
-
       const newArray = [...array, randomId]
       setArray(newArray)
 
       const newScore = current + 1
       setCurrent(newScore)
-
-      newScore > record && setRecord(prevRecord => prevRecord + 1)
+      setRecord(newScore)
     }
-
     setRandomId(randomNumber())
   }
 
