@@ -27,18 +27,18 @@ function App() {
         </div>
       </div>
       <div className='card-container'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
+        <Card current={currentScore} setCurrent={setCurrentScore} record={highScore} setRecord={setHighScore} array={trackerArray} setArray={setTrackerArray}/>
       </div>
     </>
   )
