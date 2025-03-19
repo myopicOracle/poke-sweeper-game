@@ -5,9 +5,27 @@
   text-align: center;
 }
 
+.scoreboard-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 5vw;
+  padding: 10px;
+  margin-bottom: 2vh;
+  background-color: #444141;
+  border-radius: 5px;
+  border: 1.5px solid #050404;
+}
+
 .logo {
-  height: 8em;
-  padding: 1.5em;
+  height: 5vh;
+  width: 5vh;
+  aspect-ratio: 1/1;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -34,18 +52,18 @@
 }
 
 .card-container {
-  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px 20px;
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
+  margin-top: 50px;  
+  gap: 10px 50px;
 }
 
 @media (max-width: 900px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);  
-    grid-template-rows: repeat(6, 1fr);    
+    grid-template-rows: repeat(4, 1fr);    
   }
 }
 
@@ -56,15 +74,30 @@
   }
 }
 
+@keyframes pulsate {
+  0% {
+    filter: drop-shadow(0 0 1em #646cffaa);
+  }
+  50% {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  100% {
+    filter: drop-shadow(0 0 1em #646cffaa);
+  }
+}
+
 .card {
-  padding: 2em;
-  min-height: 150px;                    
+  height: 20vh;                    
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  animation: pulsate 1.5s infinite;
 }
 
 img {
-  height: 160px;
+  height: 10vh;
+  width: 5vw;
+  aspect-ratio: 1/1;
 }
+

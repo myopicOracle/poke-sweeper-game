@@ -4,8 +4,8 @@ export default function Card() {
   const randomNumber = Math.floor(Math.random() * 30)
   const [randomId, setRandomId] = useState(randomNumber)
   const [pokemon, setPokemon] = useState({
-    name: "Pika Pika!",
-    imgUrl: "https://pokeapi.co/api/v2/pokemon/pikachu"
+    name: "pikachu",
+    imgUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
   })
 
   useEffect(() => {
